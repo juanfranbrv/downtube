@@ -35,7 +35,7 @@ while True:
     rprint(f"[bold magenta]DESCARGADOR DE VIDEOS DE YOUTUBE[/bold magenta]")
     rprint(f"[bold magenta]Creado con 💗 por @juanfrabrv[/bold magenta]")
     rprint(f"\n")
-    rprint(f"1 : Descargar vídeo")
+    rprint(f"1 : Descargar video")
     rprint(f"2 : Descargar audio")
     rprint(f"3 : Descargar lista de reproducción completa")
     rprint(f"0 : Salir\n")
