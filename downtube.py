@@ -32,10 +32,10 @@ while True:
 
     texto_formateado = pyfiglet.figlet_format("DownTube", font="slant")
     rprint(f"[bold magenta]{texto_formateado}[/bold magenta]")
-    rprint(f"[bold magenta]DESCARGADOR DE VIDEOS DE YOUTUBE[/bold magenta]")
+    rprint(f"[bold magenta]DESCARGADOR DE VÍDEOS DE YOUTUBE[/bold magenta]")
     rprint(f"[bold magenta]Creado con 💗 por @juanfrabrv[/bold magenta]")
     rprint(f"\n")
-    rprint(f"1 : Descargar video")
+    rprint(f"1 : Descargar vídeo")
     rprint(f"2 : Descargar audio")
     rprint(f"3 : Descargar lista de reproducción completa")
     rprint(f"0 : Salir\n")
@@ -47,7 +47,7 @@ while True:
         url = input("Introduce la URL del vídeo: ")
         yt = YouTube(url, on_progress_callback=on_progress)
         ys = yt.streams.get_highest_resolution()
-        rprint(f"Descargando... {yt.title}")
+        rprint(f"[bold green]Descargando... [/bold green]{yt.title}")
 
         ys.download()
         rprint("[bold green]\nDescarga completada[/bold green]")
@@ -56,7 +56,7 @@ while True:
         url = input("Introduce la URL del vídeo ▶ audio: ")
         yt = YouTube(url, on_progress_callback=on_progress)
         ys = yt.streams.get_audio_only()
-        rprint(f"Descargando... {yt.title}")
+        rprint(f"[green]Descargando... {yt.title}[/green]")
 
         ys.download()
         rprint("[bold green]\nDescarga completada[/bold green]")
@@ -66,7 +66,7 @@ while True:
         url = input("Introduce la URL del vídeo: ")
         lista_reproduccion = Playlist(url)
 
-        rprint(f"Descargando lista de reproducción... {lista_reproduccion.title}")
+        rprint(f"[green]Descargando lista de reproducción...[/green] {lista_reproduccion.title}")
         rprint(f"Descargando {len(lista_reproduccion.videos)} vídeos")
         for video in lista_reproduccion.videos:
             rprint(f"Descargando... {video.title}")
